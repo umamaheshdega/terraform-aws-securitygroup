@@ -14,7 +14,7 @@ variable "sg_name"{
 
 >>>>>>> cb9dcec (terraform)
 variable "sg_description" {
-
+    
 }
 
 variable "vpc_id" {
