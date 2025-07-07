@@ -1,5 +1,5 @@
 resource "aws_security_group" "main" {
-  name        = "${var.project_name}-${var.environment}-${var.sg_name}"
+  name        = local.sg_final_name
   description = var.sg_description
   vpc_id      = var.vpc_id
 
@@ -15,7 +15,7 @@ resource "aws_security_group" "main" {
     var.common_tags,
     var.sg_tags,
     {
-        name = "${var.project_name}-${var.environment}-${var.sg_name}"
+        name = local.sg_final_name
     }
   )
 
