@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-# expense-dev-mysql
->>>>>>> cb9dcec (terraform)
 resource "aws_security_group" "main" {
   name        = local.sg_final_name
   description = var.sg_description
@@ -15,7 +11,6 @@ resource "aws_security_group" "main" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-<<<<<<< HEAD
   tags = merge (
     var.common_tags,
     var.sg_tags,
@@ -25,13 +20,3 @@ resource "aws_security_group" "main" {
   )
 
 }
-=======
-  tags = merge(
-    var.common_tags,
-    var.sg_tags,
-    {
-        Name = local.sg_final_name
-    }
-  )
-}
->>>>>>> cb9dcec (terraform)
